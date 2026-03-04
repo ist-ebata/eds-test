@@ -2,8 +2,16 @@
 Your project's description...
 
 ## Environments
+
+### URL Format
+
 - Preview: https://main--{repo}--{owner}.aem.page/
 - Live: https://main--{repo}--{owner}.aem.live/
+
+### Actual URL
+
+- Preview: https://main--eds-test--ist-ebata.aem.page/
+- Live: https://main--eds-test--ist-ebata.aem.live/
 
 ## Documentation
 
