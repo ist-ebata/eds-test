@@ -1,5 +1,5 @@
-# Your Project's Title...
-Your project's description...
+# EDS Test Project
+Edge Delivery Serviceを試してみる
 
 ## Environments
 
