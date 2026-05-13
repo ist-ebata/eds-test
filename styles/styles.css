@@ -13,7 +13,7 @@
 :root {
   /* colors */
   --background-color: white;
-  --light-color: #f8f8f8;
+  --light-color: #f5f5f5;
   --dark-color: #505050;
   --text-color: #131313;
   --link-color: #3b63fb;
@@ -320,6 +320,12 @@ main > .section:first-of-type {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.bg-creamyellow {
+  background-color: #fffacd;
   margin: 0;
   padding: 40px 0;
 }

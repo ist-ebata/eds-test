@@ -25,3 +25,20 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* Dark mode variant */
+.cards.dark > ul > li {
+  background-color: var(--dark-color, #222);
+  border-color: #444;
+  color: #fff;
+}
+
+.cards.dark .cards-card-body p,
+.cards.dark .cards-card-body h1,
+.cards.dark .cards-card-body h2,
+.cards.dark .cards-card-body h3,
+.cards.dark .cards-card-body h4,
+.cards.dark .cards-card-body h5,
+.cards.dark .cards-card-body h6 {
+  color: #fff;
+}

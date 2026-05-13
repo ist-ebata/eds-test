@@ -1,0 +1,67 @@
+/* alternating block */
+.alternating > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px 16px;
+}
+
+.alternating > div + div {
+  border-top: 1px solid var(--light-color);
+}
+
+.alternating .alternating-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.alternating .alternating-text h2,
+.alternating .alternating-text h3 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  margin-top: 0;
+}
+
+.alternating .alternating-text p {
+  font-size: var(--body-font-size-s);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* tablet and above */
+@media (width >= 600px) {
+  .alternating > div {
+    padding: 20px 24px;
+  }
+}
+
+/* desktop: side-by-side layout with alternating direction */
+@media (width >= 900px) {
+  .alternating > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    padding: 28px 0;
+  }
+
+  .alternating > div > div {
+    flex: 1;
+  }
+
+  /* default: even rows flip to image-left, text-right */
+  .alternating > div:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  /* reverse variant: odd rows start as image-left, text-right */
+  .alternating.reverse > div:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .alternating.reverse > div:nth-child(even) {
+    flex-direction: row;
+  }
+}

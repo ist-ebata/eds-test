@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Alternating Block - Draft</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="template" content="alternating" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <h1>Alternating Block デモ</h1>
+        <p>デフォルト（1行目: テキスト左・画像右）</p>
+      </div>
+
+      <!-- Default: text-left on row 1 -->
+      <div>
+        <div class="alternating">
+          <div>
+            <div>
+              <h2>セクション 1 の見出し</h2>
+              <p>ここにセクション1の本文テキストが入ります。この文章は説明や詳細情報を伝えるためのもので、ブロックのレイアウトをテストするために使用しています。</p>
+            </div>
+            <div>
+              <picture>
+                <img src="https://picsum.photos/seed/1/800/600" alt="サンプル画像1" />
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>セクション 2 の見出し</h2>
+              <p>2行目は画像が左、テキストが右に切り替わります。CSSの nth-child(even) で flex-direction: row-reverse を適用することで実現しています。</p>
+            </div>
+            <div>
+              <picture>
+                <img src="https://picsum.photos/seed/2/800/600" alt="サンプル画像2" />
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>セクション 3 の見出し</h2>
+              <p>3行目は再びテキスト左・画像右に戻ります。この繰り返しパターンがページ全体の視覚的リズムを生み出します。</p>
+            </div>
+            <div>
+              <picture>
+                <img src="https://picsum.photos/seed/3/800/600" alt="サンプル画像3" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Reverse バリアント（1行目: 画像左・テキスト右）</h2>
+      </div>
+
+      <!-- Reverse variant: image-left on row 1 -->
+      <div>
+        <div class="alternating reverse">
+          <div>
+            <div>
+              <h2>セクション A の見出し</h2>
+              <p>reverse バリアントでは1行目が画像左・テキスト右で始まります。ブロックに "reverse" クラスを追加することで切り替わります。</p>
+            </div>
+            <div>
+              <picture>
+                <img src="https://picsum.photos/seed/4/800/600" alt="サンプル画像A" />
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>セクション B の見出し</h2>
+              <p>2行目はテキスト左・画像右に切り替わり、以降も同様のパターンが繰り返されます。</p>
+            </div>
+            <div>
+              <picture>
+                <img src="https://picsum.photos/seed/5/800/600" alt="サンプル画像B" />
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>セクション C の見出し</h2>
+              <p>3行目は再び画像左・テキスト右に戻り、reverseパターンが繰り返されます。</p>
+            </div>
+            <div>
+              <picture>
+                <img src="https://picsum.photos/seed/6/800/600" alt="サンプル画像C" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
