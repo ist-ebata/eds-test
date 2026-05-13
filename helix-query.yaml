@@ -1,17 +1,22 @@
 indices:
-  # ここで指定した名前がJSONのファイル名になります（query-indexにすると /query-index.json になる）
-  query-index:
+  default:
     include:
-      - '/**'
-    source: html
+      - "/**"
+    target: /query-index.json
     properties:
-      # 最低限必要なプロパティをここで定義します
       title:
-        select: 'head > meta[property="og:title"]'
-        value: attribute(el, "content")
+        select: "head > title"
+        value: |
+          match(el, "(.*)")
       description:
-        select: 'head > meta[name="description"]'
-        value: attribute(el, "content")
+        select: "meta[name='description']"
+        value: |
+          attribute(el, "content")
       image:
-        select: 'head > meta[property="og:image"]'
-        value: attribute(el, "content")
+        select: "meta[property='og:image']"
+        value: |
+          attribute(el, "content")
+      lastModified:
+        select: "none"
+        value: |
+          parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
