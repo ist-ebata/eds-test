@@ -1,0 +1,17 @@
+.hubspot-form {
+  max-width: 700px;
+  margin: 0 auto;
+  min-height: 200px;
+}
+
+.hubspot-form .hubspot-form-container {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+}
+
+.hubspot-form .hubspot-form-error {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid currentcolor;
+  color: #b00020;
+}
